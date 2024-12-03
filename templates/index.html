@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Castro's NLP Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Castro's NLP Project</h1>
+    </header>
+
+    <section id="intro">
+        <h2>What is NLP</h2>
+        <p>
+            Natural Language Processing (NLP) is a field of Artificial Intelligence that focuses on
+            the interaction between computers and human language. It enables computers to analyze,
+            understand, and generate human language in meaningful ways.
+        </p>
+        <h3> Why Is It Important?</h3>
+        <p>
+            NLP is important because it helps computers communicate with humans in their own language
+            and scales other language-related tasks. For example, NLP makes it possible for computers
+            to read text, hear speech, interpret it, measure sentiment and determine which parts are
+            important.
+        </p>
+        <h4> NLP Preprocessing Steps</h4>
+        <p>
+            The preprocessing steps in NLP are the initial steps that are performed on the text data
+            before applying any NLP techniques. These steps include sentence segementation, tokenization, part-of-speech,stopword removal,
+            lemmatization, and dependency parsing.
+        </p>
+    </section>
+
+    <section id="Project Overview">
+        <h2>Project Overview</h2>
+        <p>
+            This project is a simple Flask web application that uses Wikipedia API to gather text from
+            two Wikipedia pages, processes the text, and then compares the text to determine how similar
+            the two pages are. The comparison is based on the semantic similarity of the content of the
+            two pages.
+        </p>
+        <h4>How To Use The Application</h4>
+        <p>
+            To use the application, enter the titles of two Wikipedia pages in the input form below and
+            click the "Compare" button. The application will fetch the content of the two pages, process
+            the content, and then compare the content to determine the semantic similarity of the two pages.
+            The processed tokens for each page will also be displayed.
+        </p>
+    </section>
+
+    <section id="input-form">
+        <h2>Compare Wikipedia Pages</h2>
+        <form id="compare-form">
+            <label for="content1">Wikipedia Page 1:</label>
+            <textarea id="content1" name="content1" rows="10" required></textarea>
+            
+            <label for="content2">Wikipedia Page 2:</label>
+            <textarea id="content2" name="content2" rows="10" required></textarea>
+            
+            <button type="submit">Compare</button>
+        </form>
+    </section>
+
+
+    <section id="result">
+        <h2>Comparison Result</h2>
+        <div id="Semantic Similarity"></div>
+        <div id="Processed Content">
+            <h3> Processed Content Tokens</h3>
+            <div id="tokens-output" class="tokens-container"></div>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
