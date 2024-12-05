@@ -77,10 +77,6 @@ def process_text(text):
 # processed = process_text(sample_text)
 # print(processed)
 
-import spacy
-
-nlp = spacy.load("en_core_web_sm")
-
 def parse_dependencies(text1):
     doc = nlp(text1)
     print("Dependency Parsing:")
