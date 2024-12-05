@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, render_template
-from nlpLogic import get_wiki, process_text, get_wordnet_pos, parse_dependencies, similarity_calculator
+from nlpLogic import get_wiki, process_text, get_wordnet_pos, similarity_calculator
 
 
 app = Flask(__name__)
