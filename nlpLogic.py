@@ -4,6 +4,10 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet
+import spacy.cli
+spacy.cli.download("en_core_web_sm")
+nlp = spacy.load("en_core_web_sm")
+
 
 # Download NLTK resources
 nltk.download("punkt")
